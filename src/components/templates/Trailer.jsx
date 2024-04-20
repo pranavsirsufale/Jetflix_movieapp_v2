@@ -12,7 +12,7 @@ function Trailer() {
     const yvideo = useSelector(state => state[category].info.video);
    
   return  (
-    <div className='bg-[rgba(0,0,0,0.9)] absolute text-green-500 w-screen h-screen flex items-center justify-center top-[0] right-1'>
+    <div className='bg-[rgba(0,0,0,0.9)] absolute text-green-500 w-screen h-screen flex items-center justify-center top-[0] right-1 trailer'>
         <Link title='close' onClick={()=>navigate(-1)} className='hover:text-[#6556CD] ri-close-fill absolute left-8 top-9 text-3xl text-white '>
         
         </Link>

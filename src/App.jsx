@@ -10,6 +10,7 @@ import Tvdetails from './components/Tvdetails'
 import Persondetails from './components/Persondetails'
 import Trailer from './components/templates/Trailer'
 import NotFound from './components/templates/NotFound'
+import About from './components/About'
 
 function App() {
 
@@ -29,6 +30,7 @@ function App() {
       <Route path='/tvshows' element={<Tvshows/>} />
     
       <Route path='/people' element={<People/>} />
+      <Route path='/about' element={<About/>} />
 
         <Route path='/tvshows/details/:id' element={<Tvdetails/>}/>
       <Route path='/movie/details/:id' element={<Moviedetails/>} >

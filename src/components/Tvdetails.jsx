@@ -36,7 +36,7 @@ function Tvdetails() {
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
       }}
-      className="w-screen h-screen px-[10%] overflow-hidden relative overflow-y-auto"
+      className="w-screen h-screen px-[10%] overflow-hidden relative overflow-y-auto backimage"
     >
       {/* part one navigation  */}
 
@@ -60,7 +60,7 @@ function Tvdetails() {
           className=" hover:text-[#6554CD]"
           href={`https://www.wikidata.org/wiki/${info.externalid.wikidata_id}`}
         >
-          <i className="ri-earth-fill bg-transparent"></i>
+          <i className="ri-earth-fill"></i>
         </a>
         <a
           target="_blank"
@@ -73,15 +73,15 @@ function Tvdetails() {
 
       {/* part two poseter and details  */}
 
-      <div className="w-full bg-transparent flex ">
+      <div className="w-full bg-none flex details">
         <img
-          className=" shadow-[8px_17px_38px_2px_rgba(0,0,0,0.5)] h-[40vh] object-cover "
+          className=" shadow-[8px_17px_38px_2px_rgba(0,0,0,0.5)] h-[40vh] object-cover frontimage"
           src={`https://image.tmdb.org/t/p/original${
             info.detail.poster_path || info.detail.backdrop_path
           }`}
         />
 
-        <div className="content bg-transparent ml-10 text-zinc-200">
+        <div className="content bg-none ml-10  text-zinc-200">
           <h1 className="text-4xl font-black ">
             {info.detail.name ||
               info.detail.title ||
@@ -94,7 +94,7 @@ function Tvdetails() {
               ({info.detail?.first_air_date?.split("-")[0]}){" "}
             </small>
 
-            <div className="bg-transparent gap-2 flex text-zinc-400 text-[13px]">
+            <div className="bg-none gap-2 flex text-zinc-400 text-[13px]">
               {info.detail.vote_average && (
                 <span className="text-purple-200 rounded-full bg-yellow-800 w-8 pl-1.5 text-[13px] top-[70%] left-[-10%] ">
                   {info.detail.vote_average.toFixed(1) || ""}
@@ -123,7 +123,7 @@ function Tvdetails() {
               .map((lan) => (lan && lan.english_name) || lan)
               .join(", ")}
           </p>
-          <div className="mt-10 bg-transparent">
+          <div className="mt-10 bg-none">
             <Link
               to={`${pathname}/trailer`}
               className="p-3 bg-[#6554CD] rounded-md hover:bg-[#392a99]"
@@ -137,9 +137,9 @@ function Tvdetails() {
 
       {/* part 3 avalable platforms */}
 
-      <div className="bg-transparent">
-        <div className="bg-transparent w-[15%]  top-[50%] left-10%">
-          <div className="bg-transparent mt-5 grid grid-rows-4 grid-flow-col gap-6">
+      <div className="bg-none">
+        <div className="bg-none w-[15%]  top-[50%] left-10%">
+          <div className="bg-none mt-5 grid grid-rows-4 grid-flow-col gap-6">
             {info.watchproviders &&
               info.watchproviders.flatrate.map((provider, index) => (
                 <img

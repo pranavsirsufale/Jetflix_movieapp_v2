@@ -29,7 +29,7 @@ function Persondetails() {
   }, []);
 
   return info ? (
-    <div className="w-screen h-auto overflow-x-hidden ">
+    <div className="w-screen h-auto overflow-x-hidden flex">
       {/* Part 1 navigation   */}
       <nav className="h-[10vh] items-center w-full  text-zinc-100 flex gap-10 text-xl">
         <Link
@@ -40,12 +40,12 @@ function Persondetails() {
         </Link>
       </nav>
 
-      <div className="w-full flex px-10">
+      <div className="w-full bg-none flex px-10 details fcol">
         {/* Part 2 left poster and details  */}
 
-        <div className="w-[30%] ">
+        <div className="w-[30%] bg-none">
           <img
-            className=" shadow-[8px_17px_38px_2px_rgba(0,0,0,0.5)] h-[40vh] object-cover "
+            className="shadow-[8px_17px_38px_2px_rgba(0,0,0,0.5)] h-[40vh] object-cover m-3"
             src={`https://image.tmdb.org/t/p/original${info.detail.profile_path}`}
           />
           {/* 
@@ -56,7 +56,7 @@ function Persondetails() {
 
           {/* <hr className="mt-10  mb-5 border-none h-[2px] bg-zinc-500" /> */}
           {/* social media links  */}
-          <div className="text-xl text-white flex gap-x-5 bg-transparent">
+          <div className="text-xl text-white flex gap-x-5 bg-none to m-3">
             <a
               target="_blank"
               className=" hover:text-[#6554CD]"
@@ -125,7 +125,7 @@ function Persondetails() {
           {/*  Part 3 right Details and Information  */}
         </div>
 
-        <div className="w-[70%]">
+        <div className="w-[70%] bg-none">
           <h1 className="text-3xl text-zinc-300 font-black my-2">
             {" "}
             {info.detail.name}{" "}
@@ -144,7 +144,7 @@ function Persondetails() {
 
           <HorizontalCards data={info.combinedCredits.cast} />
 
-          <div className="w-full flex justify-between py-5">
+          <div className="w-full flex justify-between py-5 bg-none">
             <h1 className="text-2xl text-zinc-400 font-semibold ">
               Category
             </h1>
@@ -155,7 +155,7 @@ function Persondetails() {
               func={(e) => setCategory(e.target.value)}
             />
           </div>
-          <div className="list-disc text-zinc-400 w-full h-72 overflow-x-hidden overflow-y-auto shadow-2xl shadow-[rgba(255,255,255,.5)] border-2 border-zinc-700 p-5 my-5">
+          <div className="list-disc text-zinc-400 w-full h-72 overflow-x-hidden overflow-y-auto shadow-2xl shadow-[rgba(255,255,255,.5)] border-2 border-zinc-700 p-5 my-5 bg-none">
             {info[category + "Cretids"].cast.map((c, i) => (
               <li
                 key={c.id}

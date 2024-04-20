@@ -6,6 +6,7 @@ import Header from "./templates/Header";
 import HorizontalCards from "./templates/HorizontalCards";
 import Dropdown from "./Dropdown";
 import Loader from "./templates/Loader";
+import ToggleNav from "./templates/ToggleNav";
 
 
 function Home() {
@@ -44,7 +45,7 @@ function Home() {
   return wallpaper && trending ? (
     <>
       <SideNav />
-      <div className="w-[80%] min-h-[100vh] overflow-x-hidden ">
+      <div className="w-[100%] home min-h-[100vh] flex flex-col justify-center overflow-x-hidden ">
         <TopNav />
         <Header data={wallpaper} />
 

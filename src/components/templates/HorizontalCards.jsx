@@ -5,11 +5,11 @@ import noimage from '../../img/noimage.jpeg'
 function HorizontalCards({ data, }) {
 
   return (
-    <div className="w-full h-[40vh] p-5 bg-transparent mb-5">
+    <div className="w-full h-[40vh] p-5 horizontal bg-none mb-5">
       
 
 
-      <div  className="w-[100%] flex h-44 p-5 overflow-y-hidden bg-transparent ">
+      <div  className="w-[100%] flex h-44 p-5 overflow-y-hidden ">
         {data.map((trending, index) => (
           <Link to={`/${trending.media_type}/details/${trending.id}`} key={index} className="min-w-[15%] h-full m-5 bg-zinc-900">
             <img
@@ -21,8 +21,8 @@ function HorizontalCards({ data, }) {
 
             
 
-            <div className="text-white overflow-hidden p-3 bg-transparent">
-              <h1 className="text-sm font-semibold bg-transparent ">
+            <div className="text-white overflow-hidden p-3 bg-none">
+              <h1 className="text-sm font-semibold ">
                 {trending.title ||
                   trending.original_name ||
                   trending.oritinal_title}

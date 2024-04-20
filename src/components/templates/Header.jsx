@@ -11,19 +11,19 @@ function Header({ data }) {
         backgroundPosition: "top 10%",
         backgroundSize: "cover",backgroundRepeat:'no-repeat'
       }}
-      className="w-full  text-zinc-500 h-[50vh] flex flex-col justify-end p-[5%] items-start "
+      className="w-full header  text-zinc-500 h-[50vh] flex flex-col justify-end p-[5%] items-start z-30"
     >
-      <h1 className="w-[70%]  text-3xl font-black bg-transparent">
+      <h1 className="w-[70%]  text-3xl font-black">
         {" "}
         {data.name || data.original_name || data.original_title}{" "}
       </h1>
 
-      <p className="w-[70%] bg-transparent ">
+      <p className="w-[70%]">
         {" "}
         {data.overview.slice(0, 200)}{" "}
-        <Link to={`/${data.media_type}/details/${data.id}`} className="text-blue-400 bg-transparent">...More</Link>{" "}
+        <Link to={`/${data.media_type}/details/${data.id}`} className="text-blue-400 ">...More</Link>{" "}
       </p>
-      <p className=" flex gap-x-2 mb-2 bg-transparent">
+      <p className=" flex gap-x-2 mb-2 ">
         <i className="text-yellow-500 ri-megaphone-fill bg-transparent"></i>
         {data.release_date || "Not Available "}
         <i className="text-yellow-500 ri-album-fill bg-transparent"></i>

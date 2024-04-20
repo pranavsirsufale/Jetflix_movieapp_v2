@@ -18,7 +18,7 @@ function People() {
     const getPeople = async () =>{
         try {
             const { data } = await axios.get(`/trending/person/${category}?page=${page}`)
-            setPeople(data.results)
+            // setPeople(data.results)
 
             if(data.results.length > 0){
                 setPeople((prev)=> [...prev,...data.results])
